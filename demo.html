@@ -1,0 +1,23 @@
+<html>
+<head>
+	<script src="js/raphael-min.js" type="text/javascript"></script>
+	<script src="js/polkadot.js" type="text/javascript"></script>
+	<style>
+		body {background: #888; }
+	</style>
+</head>
+<body>
+	<div id="dots"></div>
+	
+	<script type="text/javascript">
+	
+		var p1 = Raphael('dots'),
+			dots = [{x:2,y:0,size:130},{x:1,y:1,size:300},{x:1,y:1,size:100}, {x:1, y:1, size: 30},
+					{x:3,y:1,size:89},{x:2,y:1,size:292}, {x:2,y:-1,size:292},
+					{x:1,y:2,size:129},{x:3,y:-2,size:233}, {x:-2,y:-1,size:700}];
+			p1.polkadot.plot(dots, {minX:-5, maxX:5, maxR: 20, fclick:function(d){alert(d.size);}});
+			
+	</script>
+	
+</body>
+</html>
